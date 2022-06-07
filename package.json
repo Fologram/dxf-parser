@@ -1,10 +1,13 @@
 {
-	"name": "dxf-parser",
+	"name": "@fologram/dxf-parser",
 	"version": "1.1.2",
 	"description": "Parse dxf files into a readable, logical js object.",
 	"type": "module",
 	"main": "./commonjs/index.js",
 	"module": "./esm/index.js",
+	"publishConfig": {
+	    "registry":"https://npm.pkg.github.com"
+	},
 	"exports": {
 		"import": "./esm/index.js",
 		"require": "./commonjs/index.js"
