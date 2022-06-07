@@ -12,6 +12,7 @@
 	"types": "./esm/index.d.ts",
 	"scripts": {
 		"test": "mocha --require @babel/register test",
+		"test-leaders": "mocha --require @babel/register test -g 'Leaders'",
 		"dev": "tsc -w & webpack --mode development",
 		"prod": "tsc && webpack --mode production",
 		"prepublishOnly": "npm run prod"

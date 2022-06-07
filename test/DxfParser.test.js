@@ -21,7 +21,7 @@ approvals.configure({
 	stripBOM: true,
 });
 
-const __dirname = path.dirname(new URL(import.meta.url).pathname)
+const __dirname = process.cwd()+"/test";
 
 describe('Parser', function() {
 
@@ -177,7 +177,14 @@ describe('Parser', function() {
 	});
 	
 	it('should parse MULTILEADER entities', function() {
-		verifyDxf(path.join(__dirname, 'data', 'leaders.dxf'));
+		verifyDxf(path.join(__dirname, 'data', 'mleader.dxf'));
+	});
+});
+
+describe("Leaders", () => {
+
+	it('should parse MULTILEADER entities', function() {
+		verifyDxf(path.join(__dirname, 'data', 'mleader.dxf'));
 	});
 });
 
