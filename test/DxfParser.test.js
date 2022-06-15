@@ -188,6 +188,13 @@ describe("Leaders", () => {
 	});
 });
 
+describe("Tester", () => {
+
+	it('should parse TEST entities', function() {
+		verifyDxf(path.join(__dirname, 'data', 'tester.dxf'));
+	});
+});
+
 function verifyDxf(sourceFilePath) {
 	var baseName = path.basename(sourceFilePath, '.dxf');
 	var sourceDirectory = path.dirname(sourceFilePath);

@@ -448,6 +448,7 @@ export default class DxfParser {
 			const table = {} as T;
 			let expectedCount = 0;
 
+
 			curr = scanner.next();
 			while (!groupIs(curr, 0, END_OF_TABLE_VALUE)) {
 
@@ -486,6 +487,7 @@ export default class DxfParser {
 						curr = scanner.next();
 				}
 			}
+
 			const tableRecords = table[tableDefinition.tableRecordsProperty];
 			if (tableRecords) {
 				let actualCount = (() => {
